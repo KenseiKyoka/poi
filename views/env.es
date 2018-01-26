@@ -4,12 +4,6 @@ import path from 'path-extra'
 import fs from 'fs-extra'
 import { remote } from 'electron'
 import lodash from 'lodash'
-import React from 'react'
-import ReactDOM from 'react-dom'
-import createClass from 'create-react-class'
-import FontAwesome  from 'react-fontawesome'
-import * as ReactBootstrap from 'react-bootstrap'
-const { Radio, Checkbox, FormControl } = ReactBootstrap
 
 // Environments
 window.remote = remote
