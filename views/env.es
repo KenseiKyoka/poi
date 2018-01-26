@@ -43,38 +43,6 @@ require('module').globalPaths.unshift(window.ROOT)
 window._ = lodash           // TODO: Backward compatibility
 window.$ = (param) => document.querySelector(param)
 window.$$ = (param) => document.querySelectorAll(param)
-window.React = React
-window.React.createClass = createClass
-window.ReactDOM = ReactDOM
-window.FontAwesome = FontAwesome
-window.ReactBootstrap = ReactBootstrap
-// Workaround
-window.ReactBootstrap.Input = class InputWorkAround extends React.Component {
-  render() {
-    switch (this.props.type) {
-    case 'radio': {
-      return (
-        <Radio {...this.props}>{this.props.label}</Radio>
-      )
-    }
-    case 'checkbox': {
-      return (
-        <Checkbox {...this.props}>{this.props.label}</Checkbox>
-      )
-    }
-    case 'select': {
-      return (
-        <FormControl componentClass='select' {...this.props}>{this.props.children}</FormControl>
-      )
-    }
-    default: {
-      return (
-        <FormControl {...this.props}>{this.props.children}</FormControl>
-      )
-    }
-    }
-  }
-}
 
 // Polyfills
 Object.clone = (obj) =>
