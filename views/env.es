@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom'
 import createClass from 'create-react-class'
 import FontAwesome  from 'react-fontawesome'
 import * as ReactBootstrap from 'react-bootstrap'
+import './env-parts/react-fontawesome-polyfill'
 const { Radio, Checkbox, FormControl } = ReactBootstrap
 
 // Environments

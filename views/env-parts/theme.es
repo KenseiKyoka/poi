@@ -16,10 +16,6 @@ require.extensions['.css'] = (m, name) => {
   document.head.appendChild(link)
 }
 
-if ($('#fontawesome-css')) {
-  $('#fontawesome-css').setAttribute('href', require.resolve('font-awesome/css/font-awesome.css'))
-}
-
 window.reloadCustomCss = () => {
   if (!$('#custom-css')) {
     return
